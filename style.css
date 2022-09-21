@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(199, 131, 131, 0), rgb(54, 88, 133));
+}
+
+.sno {
+    display: none;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(33, 167, 155);
+    width: 400px;
+    margin: 20px auto;
+    /* height: 400px;
+    overflow-y: hidden; */
+    /* height: fit-content; */
+
+}
+
+.button_box {
+    width: 280px;
+    margin: 35px auto;
+    position: relative;
+    background: #CECECE;
+    border-radius: 50px;
+    height: 30px;
+}
+
+.toggle_btn {
+    padding: 6px 45px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+.log_in{
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 140px;
+    height: 100%; 
+}
+
+.log_in.moveslog{
+    transform: translateX(-100%);
+}
+
+
+.sign_up{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    background: linear-gradient(to right, #1569C7, #57FEFF);
+    border-radius: 50px;
+    transition: 0.8s;
+}
+
+.sign_up.movesign{
+    transform:translateX(100%);
+    /* z-index: 1; */
+}
+
+.form_container input {
+    border-radius: 5px;
+    padding: 5px ;
+    border: 1px solid #EBECF0;
+    outline: none;
+}
+
+.main_section{
+    display: flex;
+}
+
+label {
+    color: #091E42;
+    margin: 5px 0;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 300px;
+    font-size: 20px;
+    border: transparent;
+    outline: 0px solid transparent;
+}
+
+.heading .address {
+    width: 300px;
+    height: 80px;
+    border-radius:6px;
+    outline: none;
+    border: 1px solid #EBECF0;
+    padding: 5px;
+}
+
+.submit_btn {
+    width: 145px;
+    height: 35px;
+    background: linear-gradient(to right, #1569C7, #57FEFF);
+    border-radius: 25px;
+    margin: 20px 70px;
+    border: 0;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.main_section{
+    overflow-x: hidden;
+    width: 300px;
+}
+
+.login_container{
+    margin-left: -400px;
+}
+
+.signup_container{
+    margin-right: 100px;
+    transform: translateX(400px);
+}
+
+.switchsignup{
+    transform: translateX(0);
+  }
+  .switchlogin{
+    margin-left: 0;
+  }
+
+.error {
+    font-size: 12px;
+    font-weight: 400;
+    color: #C41F1F;
+    margin-top: 5px;
+}

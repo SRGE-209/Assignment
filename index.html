@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+            <div class="form_container">
+                <div class="button_box">
+                    <!-- <div id="move"></div> -->
+                    <button type="button" class="toggle_btn sign_up">Signup</button>
+                    <button type="button" class="toggle_btn log_in">Login</button>
+                </div>
+                <div class="main_section">
+                    <form onsubmit="return getSignUp(event)">
+                    <div class="signup_container">
+                        <div class="heading">
+                            <label>First Name</label>
+                            <input type="text" id="firstName" class="firstname" name="First Name" placeholder="First Name" onblur="reusableValidation('firstName', 'nameRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Last Name</label>
+                            <input type="text" id="lastName"  class="lastname" name="Last Name" placeholder="Last Name" onblur="reusableValidation('lastName', 'nameRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Email</label>
+                            <input type="email" id="email" class="email" name="Email" placeholder="Email" onblur="reusableValidation('email', 'emailRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Mobile Number</label>
+                            <input type="text" id="mobileNum" class="mobileNum" name="Mobile Number" placeholder="Mobile Number" onblur="reusableValidation('mobileNum', 'mobileRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Password</label>
+                            <input type="password" id="password" class="password" name="Password" placeholder="Password" onblur="reusableValidation('password', 'passwordRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Confirm Password</label>
+                            <input type="password" id="conPassword" class="confirm_password" name="Confirm Password" placeholder="Confirm Password" onblur="reusableValidation('conPassword', 'passwordRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Address</label>
+                            <textarea type="text" id="address" class="address" rows="10" placeholder="Address" name="address" onblur="reusableValidation('address', 'addressRegex')"></textarea>
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>City</label>
+                            <input type="text" id="city" class="city" name="city" placeholder="City" onblur="reusableValidation('city', 'nameRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>State</label>
+                            <input type="text" id="state" class="state" name="State" placeholder="State" onblur="reusableValidation('state', 'nameRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Pincode</label>
+                            <input type="text" id="pincode" class="pincode" name="Pincode" placeholder="Pincode" onblur="reusableValidation('pincode', 'pincodeRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Country</label>
+                            <input type="text" id="country" class="country" name="Country" placeholder="Country" onblur="reusableValidation('country', 'nameRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Company Name</label>
+                            <input type="text" id="companyName" class="companyname" name="Company Name" placeholder="Company Name" onblur="reusableValidation('companyName', 'nameRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Occupation</label>
+                            <input type="text" id="occupation" name="occupation" class="occupation" placeholder="Occupation" onblur="reusableValidation('occupation', 'nameRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Year of Experience</label>
+                            <input type="number" class="experiance" name="year of experience" placeholder="Year of experience">
+                            <span class="error"></span>
+                        </div>
+                        <input type='submit' class="submit_btn" value='Sign Up' />
+                    </div>
+                </form>
+                <form onsubmit="return getLogin(event)">
+                    <div class="login_container">
+                        <div class="heading">
+                            <label>UserName</label>
+                            <input type="text" id="username" class="username" name="UserName" placeholder="UserName" onblur="reusableValidation('username', 'usernameRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <div class="heading">
+                            <label>Password</label>
+                            <input type="password" id="loginPassword" class="password" name="Password" placeholder="Password" onblur="reusableValidation('loginPassword', 'passwordRegex')">
+                            <span class="error"></span>
+                        </div>
+                        <input type='submit' class="submit_btn" value='Login' />
+                    </div>
+                </form>
+                </div>
+            </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
