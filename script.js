@@ -48,31 +48,39 @@ function reusableValidation (field, regex) {
 }
 
 function getSignUp(e) {
+    let errCount = 0;
     e.preventDefault();
     const form = document.querySelector(".signup_container")
     for(let i = 0; i< form.children.length -1; i++) {
-        if(checkEmpty(form.children[i].children[1])) continue;
+        if(checkEmpty(form.children[i].children[1])) { errCount++; continue;}
     }
     if(document.querySelector("#conPassword").value !== document.querySelector("#password").value) {
         alert("Both the password are different")
         return false
     }
+    if(errCount === 0){
     alert("User Registered successfully")
     window.location.reload();
+    }
+    return false
 }
 
 function getLogin(e) {
+    let errCount = 0;
     e.preventDefault();
     const form = document.querySelector(".login_container")
     for(let i = 0; i< form.children.length -1; i++) {
-        if(checkEmpty(form.children[i].children[1])) continue;
+        if(checkEmpty(form.children[i].children[1])) {errCount++; continue;}
     }
     if(document.querySelector("#conPassword").value !== document.querySelector("#password").value) {
         alert("Both the password are different")
         return false
     }
+    if(errCount === 0){
     alert("log in successful")
     window.location.reload();
+    }
+    return false;
 }
 
 function checkEmpty (elem){
